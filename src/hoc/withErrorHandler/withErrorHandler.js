@@ -5,10 +5,6 @@ import Modal from '../../components/UI/Modal/Modal';
 
 const withErrorHandler = (WrappedComponent, axios) => {
   return class extends Component {
-    constructor(props) {
-      super(props);
-    }
-
     state = {
       error: null
     }

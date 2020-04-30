@@ -25,7 +25,6 @@ class ContactData extends Component {
         },
         valid: false,
         touched: false,
-        touched: false
       },
       street: {
         elementType: 'input',
