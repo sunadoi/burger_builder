@@ -5,12 +5,12 @@ import BuilderControls from '../../components/Burger/BuildControls/BuildControls
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import Spinner from '../../components/UI/Spinner/Spinner';
-import axios from '../../axios-orders';
 
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 import { connect } from 'react-redux';
 import * as burgerBuilderAction from '../../store/actions/index';
+import axios from '../../axios-orders';
 
 class BurgerBuilder extends Component {
   // constructor(props) {
@@ -21,8 +21,6 @@ class BurgerBuilder extends Component {
   state = {
     purchasable: false,
     purchasing: false,
-    loading: false,
-    error: null
   }
 
   componentDidMount () {
@@ -89,9 +87,6 @@ class BurgerBuilder extends Component {
         price={this.props.price}
         purchaseCanceled={this.purchaseCancelHandler}
         purchaseContinued={this.purchaseContinueHandler} />;
-    }
-    if (this.state.loading) {
-      orderSummary = <Spinner />;
     }
 
     return (
