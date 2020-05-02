@@ -7,11 +7,11 @@ const initialState = {
   purchased: false,
 }
 
-const purchaseInit = (state, action) => {
+const purchaseInit = (state) => {
   return updateObject(state, { purchased: false })
 }
 
-const purchaseStart = (state, action) => {
+const purchaseStart = (state) => {
   return updateObject(state, { loading: true })
 }
 
@@ -24,11 +24,11 @@ const purchaseSuccess = (state, action) => {
   })
 }
 
-const purchaseFail = (state, action) => {
+const purchaseFail = (state) => {
   return updateObject(state, { loading: false })
 }
 
-const fetchOrdersStart = (state, action) => {
+const fetchOrdersStart = (state) => {
   return updateObject(state, { loading: true })
 }
 
@@ -39,7 +39,7 @@ const fetchOrdersSuccess = (state, action) => {
   })
 }
 
-const fetchOrdersFail = (state, action) => {
+const fetchOrdersFail = (state) => {
   return updateObject(state, { loading: false })
 }
 

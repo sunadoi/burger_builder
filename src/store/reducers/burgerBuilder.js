@@ -47,7 +47,7 @@ const setIngredients = (state, action) => {
   });
 }
 
-const fetchIngredients = (state, action) => {
+const fetchIngredients = (state) => {
   return updateObject(state, { error: true });
 }
 
